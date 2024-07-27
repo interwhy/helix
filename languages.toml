@@ -482,6 +482,19 @@ block-comment-tokens = { start = "/*", end = "*/" }
 language-servers = [ "clangd" ]
 indent = { tab-width = 2, unit = "  " }
 
+[[language]]
+name = "c3"
+scope = "source.c3"
+injection-regex = "c3"
+file-types = ["c3", "c3t"]
+comment-token = "//"
+block-comment-tokens = { start = "/*", end = "*/" }
+indent = { tab-width = 2, unit = "\t" }
+
+[[grammar]]
+name = "c3"
+source = { git = "https://github.com/cbuttner/tree-sitter-c3", rev = "ef09c89e498b70e4dfbf81d00e8f4086fa8d1c0a" }
+
 [language.debugger]
 name = "lldb-dap"
 transport = "stdio"
